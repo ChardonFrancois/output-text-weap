@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './FormIput.css'
 
 export default class FormInput extends Component {
   state = {
@@ -31,7 +32,7 @@ export default class FormInput extends Component {
   renderCard = () => {
     return this.state.items.map((item, indx) => {
       return (
-        <div className="card" key={indx}>
+        <div className="card change-style flip-2-hor-top-bck " key={indx}>
           <div className="card-body">
             <h2>{item.name}</h2>
             <hr />
@@ -46,7 +47,7 @@ export default class FormInput extends Component {
   render() {
     return (
       <div>
-        <div className="card my-3">
+        <div className="card my-3 test">
           <div className="card-header">Add someone</div>
           <div className="card-body">
             <form className="my-form" onSubmit={this.onSubmit}>
@@ -82,7 +83,7 @@ export default class FormInput extends Component {
                   value={this.state.city}
                 />
               </div>
-              <button className="btn btn-primary">Create your file</button>
+              <button className="btn ">Create your file</button>
             </form>
           </div>
         </div>
